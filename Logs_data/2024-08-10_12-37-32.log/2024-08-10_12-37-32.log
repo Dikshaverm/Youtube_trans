@@ -1,0 +1,8 @@
+2024-08-10 12:37:32,963 logger.py 21 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-10_12-37-32.log\2024-08-10_12-37-32.log
+2024-08-10 12:37:33,285 temp.py 81 - INFO - Initializing Mp3FileStorage
+2024-08-10 12:37:33,303 temp.py 29 - INFO - Connected to MySQL database
+2024-08-10 12:37:33,306 temp.py 43 - INFO - Using database: yt_db
+2024-08-10 12:37:33,308 temp.py 69 - INFO - Table mp3_files already exists.
+2024-08-10 12:37:33,308 temp.py 144 - INFO - MP3 file stored with session_id: d92d16d0-5a3a-492b-bac0-248311797c4d
+2024-08-10 12:37:33,308 temp.py 109 - INFO - Fetching mp3 file from the database
+2024-08-10 12:37:33,345 temp.py 120 - INFO - MP3 file 8eead101-fc97-4469-93a9-860d1dd313a0 fetched successfully

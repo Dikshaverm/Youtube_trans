@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-PACKAGE_NAME = 'Youtube_translator'
+PACKAGE_NAME = 'youtube_translator'
 PACKAGE_VERSION = '1.0.0'
 AUTHOR = 'Diksha Verma'
 AUTHOR_EMAIL = 'dikshavermaa8800@gmail.com'
@@ -9,6 +9,7 @@ VERSION = PACKAGE_VERSION
 DESCRIPTION = 'Translate YouTube videos.'
 LONG_DESCRIPTION = 'Translate YouTube videos.'
 LONG_DESCRIPTION_CONTENT_TYPE = 'text/markdown'
+
 
 setup(
     name=PACKAGE_NAME,
@@ -22,4 +23,3 @@ setup(
     packages=find_packages(),
     include_package_data=True,
 )
-m k mk

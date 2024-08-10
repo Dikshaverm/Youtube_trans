@@ -1,0 +1,11 @@
+setup.py
+youtube_translator/__init__.py
+youtube_translator/app.py
+youtube_translator/constants.py
+youtube_translator/db_connector.py
+youtube_translator/logger.py
+youtube_translator/model.py
+youtube_translator.egg-info/PKG-INFO
+youtube_translator.egg-info/SOURCES.txt
+youtube_translator.egg-info/dependency_links.txt
+youtube_translator.egg-info/top_level.txt

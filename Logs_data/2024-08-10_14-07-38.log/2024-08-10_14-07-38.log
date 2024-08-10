@@ -1,0 +1,13 @@
+2024-08-10 14:07:38,047 logger.py 21 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-10_14-07-38.log\2024-08-10_14-07-38.log
+2024-08-10 14:07:38,233 db_connector.py 10 - INFO - Loaded environment variables
+2024-08-10 14:07:38,233 db_connector.py 12 - INFO - savit:diksha
+2024-08-10 14:07:38,887 db_storage.py 14 - INFO - Initializing Mp3FileStorage
+2024-08-10 14:07:38,941 db_connector.py 57 - INFO - Connected to MySQL database
+2024-08-10 14:07:38,944 db_connector.py 76 - INFO - Using database: yt_db
+2024-08-10 14:07:38,947 db_connector.py 102 - INFO - Table mp3_files already exists.
+2024-08-10 14:07:38,948 db_storage.py 22 - INFO - Inserting mp3 file into the database
+2024-08-10 14:07:40,303 db_storage.py 33 - INFO - MP3 file inserted successfully
+2024-08-10 14:07:40,305 db_storage.py 42 - INFO - Fetching mp3 file from the database
+2024-08-10 14:07:41,364 db_storage.py 59 - INFO - MP3 file C:\Users\savit\PycharmProjects\Youtube_translator\wav_files.wav\temp.mp3 fetched successfully
+2024-08-10 14:07:41,366 db_storage.py 85 - INFO - Initializing mp3_file_storage constructor component with 272549305711874882818533246744410719218 
+
