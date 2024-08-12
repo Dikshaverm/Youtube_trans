@@ -1,0 +1,69 @@
+2024-08-12 20:55:26,261 logger.py 22 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-12_20-55-26.log\2024-08-12_20-55-26.log
+2024-08-12 20:55:28,406 db_connector.py 9 - INFO - Loaded environment variables
+2024-08-12 20:55:28,406 db_connector.py 11 - INFO - savit:diksha
+2024-08-12 20:56:52,982 whisper_model.py 10 - INFO - Model loaded successfully
+2024-08-12 20:57:10,180 Mp3_download.py 57 - INFO - Storing the audio file in location : C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_20_55_28
+
+2024-08-12 20:57:17,283 Mp3_download.py 91 - INFO - Converted audio file C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_20_55_28
+2024-08-12 20:57:17,286 db_storage.py 13 - INFO - Initializing Mp3FileStorage
+2024-08-12 20:57:17,286 db_connector.py 39 - INFO - Initializing MySQL database connection inside the ConnectToDb Class
+
+2024-08-12 20:57:17,286 db_connector.py 53 - INFO - Inside the ConnectToDb Class initiating connect_to_db methods.
+
+2024-08-12 20:57:17,930 db_connector.py 60 - INFO - Connected to MySQL database
+2024-08-12 20:57:17,930 db_connector.py 61 - INFO - Exiting the ConnectToDb Class initiating connect_to_db methods
+
+2024-08-12 20:57:17,930 db_connector.py 45 - INFO - MySQL database connection successful
+
+2024-08-12 20:57:17,930 db_connector.py 70 - INFO - Inside the ConnectToDb Class initiating create_database methods.
+
+2024-08-12 20:57:17,937 db_connector.py 80 - INFO - Inside the ConnectToDb Class initiating use_database methods.
+
+2024-08-12 20:57:17,938 db_connector.py 83 - INFO - Using database: yt_db
+2024-08-12 20:57:17,956 db_connector.py 109 - INFO - Table mp3_files already exists.
+2024-08-12 20:57:17,956 db_storage.py 21 - INFO - Inserting mp3 file into the database
+2024-08-12 20:57:18,201 db_storage.py 32 - INFO - MP3 file inserted successfully
+2024-08-12 20:57:18,203 main.py 49 - INFO - File Inserted in database successfully 21d3b194-5f37-4083-ba91-e2f4a7a272ee
+2024-08-12 20:57:18,203 db_storage.py 41 - INFO - Deleting mp3 file from the System C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_20_55_28.mp3
+2024-08-12 20:57:18,204 db_storage.py 43 - INFO - MP3 file deleted successfully
+2024-08-12 20:57:18,204 main.py 52 - INFO - File deleted from OS successfully 21d3b194-5f37-4083-ba91-e2f4a7a272ee
+2024-08-12 20:57:18,205 db_storage.py 61 - INFO - Fetching mp3 file from the database
+2024-08-12 20:57:20,644 db_storage.py 80 - INFO - WAV file 21d3b194-5f37-4083-ba91-e2f4a7a272ee fetched successfully
+2024-08-12 20:57:20,645 db_storage.py 41 - INFO - Deleting mp3 file from the System C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_20_55_28.wav
+2024-08-12 20:57:20,647 db_storage.py 43 - INFO - MP3 file deleted successfully
+2024-08-12 21:07:25,522 main.py 61 - INFO - Transcribe successfully 21d3b194-5f37-4083-ba91-e2f4a7a272ee
+2024-08-12 21:07:25,522 db_storage.py 51 - INFO - Deleting wav file from the System C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_20_55_28.wav
+2024-08-12 21:07:25,523 db_storage.py 56 - ERROR - Error inserting wav file: [WinError 2] The system cannot find the file specified: 'C:\\Users\\savit\\PycharmProjects\\Youtube_translator\\audio\\2024_08_12_20_55_28.wav'
+2024-08-12 21:19:27,692 logger.py 22 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-12_21-19-27.log\2024-08-12_21-19-27.log
+2024-08-12 21:19:27,718 db_connector.py 9 - INFO - Loaded environment variables
+2024-08-12 21:19:27,718 db_connector.py 11 - INFO - savit:diksha
+2024-08-12 21:20:27,207 whisper_model.py 10 - INFO - Model loaded successfully
+2024-08-12 21:20:36,492 Mp3_download.py 57 - INFO - Storing the audio file in location : C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_21_19_27
+
+2024-08-12 21:20:43,618 Mp3_download.py 91 - INFO - Converted audio file C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_21_19_27
+2024-08-12 21:20:43,621 db_storage.py 13 - INFO - Initializing Mp3FileStorage
+2024-08-12 21:20:43,621 db_connector.py 39 - INFO - Initializing MySQL database connection inside the ConnectToDb Class
+
+2024-08-12 21:20:43,622 db_connector.py 53 - INFO - Inside the ConnectToDb Class initiating connect_to_db methods.
+
+2024-08-12 21:20:44,288 db_connector.py 60 - INFO - Connected to MySQL database
+2024-08-12 21:20:44,288 db_connector.py 61 - INFO - Exiting the ConnectToDb Class initiating connect_to_db methods
+
+2024-08-12 21:20:44,288 db_connector.py 45 - INFO - MySQL database connection successful
+
+2024-08-12 21:20:44,288 db_connector.py 70 - INFO - Inside the ConnectToDb Class initiating create_database methods.
+
+2024-08-12 21:20:44,297 db_connector.py 80 - INFO - Inside the ConnectToDb Class initiating use_database methods.
+
+2024-08-12 21:20:44,298 db_connector.py 83 - INFO - Using database: yt_db
+2024-08-12 21:20:44,332 db_connector.py 109 - INFO - Table mp3_files already exists.
+2024-08-12 21:20:44,333 db_storage.py 21 - INFO - Inserting mp3 file into the database
+2024-08-12 21:20:44,505 db_storage.py 32 - INFO - MP3 file inserted successfully
+2024-08-12 21:20:44,506 main.py 49 - INFO - File Inserted in database successfully 43f5dc67-5d6e-4002-b3a3-4f6f3fcf3975
+2024-08-12 21:20:44,506 db_storage.py 41 - INFO - Deleting mp3 file from the System C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_21_19_27.mp3
+2024-08-12 21:20:44,507 db_storage.py 43 - INFO - MP3 file deleted successfully
+2024-08-12 21:20:44,508 main.py 52 - INFO - File deleted from OS successfully 43f5dc67-5d6e-4002-b3a3-4f6f3fcf3975
+2024-08-12 21:20:44,508 db_storage.py 61 - INFO - Fetching mp3 file from the database
+2024-08-12 21:20:46,104 db_storage.py 80 - INFO - WAV file 43f5dc67-5d6e-4002-b3a3-4f6f3fcf3975 fetched successfully
+2024-08-12 21:20:46,104 db_storage.py 41 - INFO - Deleting mp3 file from the System C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_12_21_19_27.wav
+2024-08-12 21:20:46,107 db_storage.py 43 - INFO - MP3 file deleted successfully

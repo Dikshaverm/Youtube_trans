@@ -1,0 +1,4 @@
+2024-08-12 20:32:31,277 logger.py 22 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-12_20-32-31.log\2024-08-12_20-32-31.log
+2024-08-12 20:32:33,490 db_connector.py 9 - INFO - Loaded environment variables
+2024-08-12 20:32:33,491 db_connector.py 11 - INFO - savit:diksha
+2024-08-12 20:33:57,683 whisper_model.py 10 - INFO - Model loaded successfully

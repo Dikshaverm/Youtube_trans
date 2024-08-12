@@ -37,7 +37,11 @@ if submit:
     audio_file_path = audio_downloader.audio_path()
     audio_downloader.convert_audio()
 
+    logging.info(f"Audio File Path : {audio_file_path}")
+
     wav_file_path = audio_downloader.get_wav_path()
+
+    logging.info(f"Wave File Path : {wav_file_path}")
 
     file_name = str(uuid.uuid4())
 
@@ -53,12 +57,14 @@ if submit:
 
     audio_data = file_storage.get_mp3_file(session_id=session_id, file_name=file_name)
 
-    file_storage.delete_mp3_file_from_os(file_path=wav_file_path)
+    # file_storage.delete_mp3_file_from_os(file_path=wav_file_path)
+    # logging.info(f"File deleted from OS successfully {file_name}")
 
     # Model
     trans = Transcribe()
     st.session_state.transcript = trans.voice_to_text(audio_data)
     logging.info(f"Transcribe successfully {file_name}")
+    logging.info(f"Transcribe Text \n", st.session_state.transcript)
 
     file_storage.delete_wav_file_from_os(file_path=wav_file_path)
     logging.info("Deleting the wav file from storage")

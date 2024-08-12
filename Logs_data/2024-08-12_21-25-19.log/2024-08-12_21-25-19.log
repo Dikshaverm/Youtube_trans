@@ -1,0 +1,21 @@
+2024-08-12 21:25:19,586 logger.py 22 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-12_21-25-19.log\2024-08-12_21-25-19.log
+2024-08-12 21:25:19,790 db_connector.py 9 - INFO - Loaded environment variables
+2024-08-12 21:25:19,790 db_connector.py 11 - INFO - savit:diksha
+2024-08-12 21:25:20,316 db_storage.py 13 - INFO - Initializing Mp3FileStorage
+2024-08-12 21:25:20,316 db_connector.py 39 - INFO - Initializing MySQL database connection inside the ConnectToDb Class
+
+2024-08-12 21:25:20,316 db_connector.py 53 - INFO - Inside the ConnectToDb Class initiating connect_to_db methods.
+
+2024-08-12 21:25:20,363 db_connector.py 60 - INFO - Connected to MySQL database
+2024-08-12 21:25:20,364 db_connector.py 61 - INFO - Exiting the ConnectToDb Class initiating connect_to_db methods
+
+2024-08-12 21:25:20,364 db_connector.py 45 - INFO - MySQL database connection successful
+
+2024-08-12 21:25:20,364 db_connector.py 70 - INFO - Inside the ConnectToDb Class initiating create_database methods.
+
+2024-08-12 21:25:20,365 db_connector.py 80 - INFO - Inside the ConnectToDb Class initiating use_database methods.
+
+2024-08-12 21:25:20,366 db_connector.py 83 - INFO - Using database: yt_db
+2024-08-12 21:25:20,369 db_connector.py 109 - INFO - Table mp3_files already exists.
+2024-08-12 21:25:20,369 db_storage.py 51 - INFO - Deleting wav file from the System C:\Users\savit\PycharmProjects\Youtube_translator\data\43f5dc67-5d6e-4002-b3a3-4f6f3fcf3975_from_db.wav
+2024-08-12 21:25:20,369 db_storage.py 56 - ERROR - Error inserting wav file: [WinError 2] The system cannot find the file specified: 'C:\\Users\\savit\\PycharmProjects\\Youtube_translator\\data\\43f5dc67-5d6e-4002-b3a3-4f6f3fcf3975_from_db.wav'

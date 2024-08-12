@@ -53,7 +53,7 @@ class Mp3FileStorage:
             logging.info("wav file deleted successfully")
 
         except Exception as e:
-            logging.error(f"Error inserting wav file: {e}")
+            logging.error(f"Error deleting wav file: {e}")
             raise YoutubeException(e, sys)
 
     def get_mp3_file(self, session_id: str, file_name: str):
@@ -91,10 +91,10 @@ class Mp3FileStorage:
             logging.error(f"Error fetching mp3 file: {e}")
             raise YoutubeException(e, sys)
 
-
+"""
 if __name__ == "__main__":
     session_id = int(uuid.uuid1())
-    path = r"C:\Users\savit\PycharmProjects\Youtube_translator\audio\2024_08_10_16_07_07.mp3"
+    path = r"C:\savit\PycharmProjects\Youtube_translatorudio4_08_10_16_07_07.mp3"
     file_name = str(uuid.uuid1())
     print(session_id)
     file_storage = Mp3FileStorage()
@@ -115,6 +115,7 @@ if __name__ == "__main__":
 
     while pygame.mixer.music.get_busy():
         pass
+"""
 
 
 
