@@ -1,5 +1,0 @@
-2024-08-10 14:04:23,377 logger.py 21 - INFO - Logging started at C:\Users\savit\PycharmProjects\Youtube_translator\Logs_data\2024-08-10_14-04-23.log\2024-08-10_14-04-23.log
-2024-08-10 14:04:23,435 db_connector.py 10 - INFO - Loaded environment variables
-2024-08-10 14:04:23,436 db_connector.py 12 - INFO - savit:diksha
-2024-08-10 14:04:23,441 db_storage.py 12 - INFO - Initializing Mp3FileStorage
-2024-08-10 14:04:23,441 db_connector.py 59 - ERROR - Error connecting to MySQL: module 'mysql' has no attribute 'connector'

@@ -1,21 +1,22 @@
+from youtube_translator.logger import logging
+from youtube_translator.download_from_yt.Mp3_download import AudioDownloader
+from youtube_translator.db_storage import Mp3FileStorage
 import streamlit as st
 from youtube_translator.constants import lang_dict2
+from youtube_translator.model.whisper_model import Transcribe
+import uuid
 
-import os
-from youtube_translator.model import download_audio
+if st.session_state is None:
+    st.session_state.url = ''
 
-"""if st.session_state is None:
-    st.session_state.lang = 'en'
-if st.session_state['download'] is None:
-    st.session_state['download'] = ''"""
+st.markdown("# VIDEO TRANSLATOR")
+st.markdown("### Please Put Any Video Link a")
 
-st.markdown('## VIDEO TRANSLATOR')
-st.title('Video Translator')
+
 
 with st.form(key='my-form'):
-
-    url2 = st.text_input('Enter the URL')
-    st.session_state.url = url2
+    url = st.text_input('Enter the URL')
+    st.session_state.url = url
 
     language = st.radio('Select Language', lang_dict2.keys())
     st.session_state.language = language
@@ -23,26 +24,48 @@ with st.form(key='my-form'):
     final_language = lang_dict2[language]
     st.session_state.final_language = final_language
 
+    st.info("Selected Language: {}".format(final_language))
     submit = st.form_submit_button(label='Submit')
 
 
 if submit:
-    st.write(st.session_state.url)
-    st.write(st.session_state.language)
-    st.write(f"Language code : {st.session_state.final_language}")
+    session_id = int(uuid.uuid4())
 
-    st.session_state.downloaded_audio = download_audio(st.session_state.url)
-    st.info(f"Audio file downloaded")
+    audio_downloader = AudioDownloader(url)
+    audio_downloader.download_audio()
 
-    with open(st.session_state.downloaded_audio, 'w') as audio_file:
-        audio_file.write(st.session_state.downloaded_audio)
+    audio_file_path = audio_downloader.audio_path()
+    audio_downloader.convert_audio()
 
-    os.makedirs(os.path.join(os.getcwd(), 'audio_files'), exist_ok=True)
+    wav_file_path = audio_downloader.get_wav_path()
 
-    # os.path.join(st.session_state.downloaded_audio,  ).
+    file_name = str(uuid.uuid4())
 
-    path_name = os.path.join(os.getcwd(), 'wav_files.wav')
+    file_storage = Mp3FileStorage()
+    file_storage.insert_mp3_file(session_id=session_id,
+                                 file_path=audio_file_path,
+                                 file_name=file_name
+                                 )
+    logging.info(f"File Inserted in database successfully {file_name}")
 
+    file_storage.delete_mp3_file_from_os(file_path=audio_file_path)
+    logging.info(f"File deleted from OS successfully {file_name}")
 
+    audio_data = file_storage.get_mp3_file(session_id=session_id, file_name=file_name)
 
+    file_storage.delete_mp3_file_from_os(file_path=wav_file_path)
 
+    # Model
+    trans = Transcribe()
+    st.session_state.transcript = trans.voice_to_text(audio_data)
+    logging.info(f"Transcribe successfully {file_name}")
+
+    file_storage.delete_wav_file_from_os(file_path=wav_file_path)
+    logging.info("Deleting the wav file from storage")
+
+    st.markdown("## TEXT TRANSCRIPT")
+    st.write(st.session_state.transcript)
+
+    st.session_state.final_text = trans.translate_text(text=st.session_state.transcript, language_code=final_language)
+    st.markdown("### Translated Text")
+    st.write(st.session_state.final_text)

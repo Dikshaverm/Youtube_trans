@@ -30,18 +30,23 @@ def connect_to_db():
 
     except Exception as e:
         logging.error(e)
-        raise e
+        raise YoutubeException(e, sys) from e
 
 
 class ConnectToDb:
     def __init__(self):
-        logging.info("Initializing MySQL database connection inside the ConnectToDb Class\n")
-        self.user = os.getenv('USER_NAME')
-        self.password = os.getenv('PASSWORD')
-        self.host = os.getenv('HOST')
-        self.database = os.getenv('DATABASE_NAME')
-        self.conn = self.connect_to_db()
-        logging.info("MySQL database connection successful\n")
+        try:
+            logging.info("Initializing MySQL database connection inside the ConnectToDb Class\n")
+            self.user = os.getenv('USER_NAME')
+            self.password = os.getenv('PASSWORD')
+            self.host = os.getenv('HOST')
+            self.database = os.getenv('DATABASE_NAME')
+            self.conn = self.connect_to_db()
+            logging.info("MySQL database connection successful\n")
+
+        except Exception as e:
+            logging.error(e)
+            raise YoutubeException(e, sys) from e
 
     def connect_to_db(self):
         try:
@@ -55,6 +60,7 @@ class ConnectToDb:
                 logging.info("Connected to MySQL database")
                 logging.info("Exiting the ConnectToDb Class initiating connect_to_db methods\n")
                 return conn
+
         except Exception as e:
             logging.error(f"Error connecting to MySQL: {e}")
             raise YoutubeException(e, sys)
@@ -110,6 +116,8 @@ class ConnectToDb:
             cursor.close()
 
 
+"""
 if __name__ == '__main__':
     connect_to_db()
-    logging.info("Exiting fro main Connected to MySQL database")
+    logging.info("Exiting fro main Connected to MySQL database
+"""

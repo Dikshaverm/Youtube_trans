@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 lang_dict = {'bn': 'bengali' ,
              'en': 'english' ,
              'gu': 'gujarati',
@@ -20,3 +23,7 @@ for key, value in lang_dict.items():
         lang_dict2[value] = key
     else:
         lang_dict2[value] = key
+
+
+MAIN_FILE_PATH = Path(r"C:\Users\savit\PycharmProjects\Youtube_translator")
+AUDIO_FILE_PATH = Path(__file__).parent.with_name('audio')

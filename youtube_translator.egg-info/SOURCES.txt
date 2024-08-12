@@ -3,9 +3,16 @@ youtube_translator/__init__.py
 youtube_translator/app.py
 youtube_translator/constants.py
 youtube_translator/db_connector.py
+youtube_translator/db_storage.py
+youtube_translator/exception.py
 youtube_translator/logger.py
 youtube_translator/model.py
+youtube_translator/temp.py
 youtube_translator.egg-info/PKG-INFO
 youtube_translator.egg-info/SOURCES.txt
 youtube_translator.egg-info/dependency_links.txt
 youtube_translator.egg-info/top_level.txt
+youtube_translator/download_from_yt/Mp3_download.py
+youtube_translator/download_from_yt/__init__.py
+youtube_translator/model/__init__.py
+youtube_translator/model/whisper.py
